@@ -1,0 +1,31 @@
+<h1 class="mt-4 mb-4">Our Flats(<%= @flats.count %>)</h1>
+
+<div class="mb-5">
+  <%= link_to "Add Flat", new_flat_path, class: "btn btn-secondary mt-4" %>
+</div>
+
+<div class="flats-grid">
+  <% @flats.each do |flat| %>
+  <div class="flat-card hvr-grow ">
+    <div>
+      <h4><%= flat.name  %></h4>
+    </div>
+    <div>
+      <p class="mt-4"><%= flat.address %></p>
+    </div>
+    <div>
+      <p class="mt-4"><%= flat.description %></p>
+    </div>
+    <div>
+      <p class="mt-4"><%= flat.price_per_night %>€</p>
+    </div>
+    <div>
+      <p class="mt-4"><%= flat.number_of_guests %></p>
+    </div>
+
+    <%= link_to "See more", flat_path(flat.id), class: "btn btn-primary mt-4" %>
+  </div>
+  <% end %>
+
+
+</div>

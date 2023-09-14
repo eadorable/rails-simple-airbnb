@@ -1,0 +1,20 @@
+<div class="flats-grid mt-5">
+  <div class="flat-card">
+    <div>
+      <h4><%= @flat.name  %></h4>
+    </div>
+    <div>
+      <p class="mt-4">Adress: <%= @flat.address %></p>
+    </div>
+    <div>
+      <p class="mt-4">Description: <%= @flat.description %></p>
+    </div>
+    <div>
+      <p class="mt-4">Price per night: <%= @flat.price_per_night %>€</p>
+    </div>
+    <div>
+      <p class="mt-4">Capacity: <%= @flat.number_of_guests %></p>
+    </div>
+    <%= link_to "Bact To List", flats_path, class: "btn btn-primary mt-4" %>
+  </div>
+</div>
