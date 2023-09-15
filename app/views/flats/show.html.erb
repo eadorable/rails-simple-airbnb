@@ -16,5 +16,6 @@
       <p class="mt-4">Capacity: <%= @flat.number_of_guests %></p>
     </div>
     <%= link_to "Bact To List", flats_path, class: "btn btn-primary mt-4" %>
-  </div>
+    <%= link_to "Edit Information", edit_flat_path(@flat.id), class: "btn btn-primary mt-4" %>
+    </div>
 </div>
